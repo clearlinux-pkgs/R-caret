@@ -4,7 +4,7 @@
 #
 Name     : R-caret
 Version  : 6.0.79
-Release  : 10
+Release  : 11
 URL      : https://cran.r-project.org/src/contrib/caret_6.0-79.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/caret_6.0-79.tar.gz
 Summary  : Classification and Regression Training
