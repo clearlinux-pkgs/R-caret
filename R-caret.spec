@@ -4,20 +4,23 @@
 #
 Name     : R-caret
 Version  : 6.0.81
-Release  : 23
+Release  : 24
 URL      : https://cran.r-project.org/src/contrib/caret_6.0-81.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/caret_6.0-81.tar.gz
 Summary  : Classification and Regression Training
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-caret-lib = %{version}-%{release}
-Requires: R-fastICA
+Requires: R-markdown
+Requires: R-mda
 BuildRequires : R-Cubist
 BuildRequires : R-ModelMetrics
 BuildRequires : R-earth
 BuildRequires : R-fastICA
 BuildRequires : R-ggplot2
 BuildRequires : R-klaR
+BuildRequires : R-markdown
+BuildRequires : R-mda
 BuildRequires : R-pamr
 BuildRequires : R-pls
 BuildRequires : R-recipes
@@ -46,10 +49,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542994262
+export SOURCE_DATE_EPOCH=1552726306
 
 %install
-export SOURCE_DATE_EPOCH=1542994262
+export SOURCE_DATE_EPOCH=1552726306
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -85,8 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library caret|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  caret || :
 
 
 %files
@@ -130,9 +132,41 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/caret/help/paths.rds
 /usr/lib64/R/library/caret/html/00Index.html
 /usr/lib64/R/library/caret/html/R.css
-/usr/lib64/R/library/caret/libs/symbols.rds
 /usr/lib64/R/library/caret/models/models.RData
 /usr/lib64/R/library/caret/models/sampling.RData
+/usr/lib64/R/library/caret/tests/testthat.R
+/usr/lib64/R/library/caret/tests/testthat/test_BoxCox.R
+/usr/lib64/R/library/caret/tests/testthat/test_Dummies.R
+/usr/lib64/R/library/caret/tests/testthat/test_bad_class_options.R
+/usr/lib64/R/library/caret/tests/testthat/test_classDist.R
+/usr/lib64/R/library/caret/tests/testthat/test_confusionMatrix.R
+/usr/lib64/R/library/caret/tests/testthat/test_data_spliting.R
+/usr/lib64/R/library/caret/tests/testthat/test_gafs.R
+/usr/lib64/R/library/caret/tests/testthat/test_ggplot.R
+/usr/lib64/R/library/caret/tests/testthat/test_glmnet_varImp.R
+/usr/lib64/R/library/caret/tests/testthat/test_minimal.R
+/usr/lib64/R/library/caret/tests/testthat/test_misc.R
+/usr/lib64/R/library/caret/tests/testthat/test_mnLogLoss.R
+/usr/lib64/R/library/caret/tests/testthat/test_models_bagEarth.R
+/usr/lib64/R/library/caret/tests/testthat/test_multiclassSummary.R
+/usr/lib64/R/library/caret/tests/testthat/test_nearZeroVar.R
+/usr/lib64/R/library/caret/tests/testthat/test_preProcess.R
+/usr/lib64/R/library/caret/tests/testthat/test_preProcess_internals.R
+/usr/lib64/R/library/caret/tests/testthat/test_preProcess_methods.R
+/usr/lib64/R/library/caret/tests/testthat/test_safs.R
+/usr/lib64/R/library/caret/tests/testthat/test_sampling_options.R
+/usr/lib64/R/library/caret/tests/testthat/test_spatialSign.R
+/usr/lib64/R/library/caret/tests/testthat/test_tibble.R
+/usr/lib64/R/library/caret/tests/testthat/test_twoClassSummary.R
+/usr/lib64/R/library/caret/tests/testthat/test_varImp.R
+/usr/lib64/R/library/caret/tests/testthat/trim.R
+/usr/lib64/R/library/caret/tests/testthat/trim_C5.R
+/usr/lib64/R/library/caret/tests/testthat/trim_bayesglm.R
+/usr/lib64/R/library/caret/tests/testthat/trim_glm.R
+/usr/lib64/R/library/caret/tests/testthat/trim_glmnet.R
+/usr/lib64/R/library/caret/tests/testthat/trim_rpart.R
+/usr/lib64/R/library/caret/tests/testthat/trim_train.R
+/usr/lib64/R/library/caret/tests/testthat/trim_treebag.R
 
 %files lib
 %defattr(-,root,root,-)
