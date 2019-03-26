@@ -1,4 +1,12 @@
-6.0.81
+6.0.82
+R-data.table
 R-fastICA
+R-foreach
+R-gtable
+R-lazyeval
 R-markdown
 R-mda
+R-munsell
+R-party
+R-plyr
+R-scales
