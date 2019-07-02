@@ -1,14 +1,10 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-R-Cubist
-R-ModelMetrics
-R-earth
-R-ggplot2
+R-mda
+R-subselect
+R-spls
 R-klaR
 R-pamr
-R-pls
-R-recipes
-R-spls
-R-subselect
 R-superpc
-R-withr
+R-Cubist
+R-rmarkdown
