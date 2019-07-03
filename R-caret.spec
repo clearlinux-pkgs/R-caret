@@ -4,7 +4,7 @@
 #
 Name     : R-caret
 Version  : 6.0.84
-Release  : 31
+Release  : 32
 URL      : https://cran.r-project.org/src/contrib/caret_6.0-84.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/caret_6.0-84.tar.gz
 Summary  : Classification and Regression Training
@@ -16,12 +16,11 @@ Requires: R-ModelMetrics
 Requires: R-earth
 Requires: R-foreach
 Requires: R-ggplot2
+Requires: R-iterators
 Requires: R-klaR
 Requires: R-mda
-Requires: R-munsell
 Requires: R-pamr
 Requires: R-plyr
-Requires: R-purrr
 Requires: R-recipes
 Requires: R-reshape2
 Requires: R-spls
@@ -33,12 +32,11 @@ BuildRequires : R-ModelMetrics
 BuildRequires : R-earth
 BuildRequires : R-foreach
 BuildRequires : R-ggplot2
+BuildRequires : R-iterators
 BuildRequires : R-klaR
 BuildRequires : R-mda
-BuildRequires : R-munsell
 BuildRequires : R-pamr
 BuildRequires : R-plyr
-BuildRequires : R-purrr
 BuildRequires : R-recipes
 BuildRequires : R-reshape2
 BuildRequires : R-rmarkdown
@@ -67,10 +65,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562107346
+export SOURCE_DATE_EPOCH=1562194582
 
 %install
-export SOURCE_DATE_EPOCH=1562107346
+export SOURCE_DATE_EPOCH=1562194582
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
