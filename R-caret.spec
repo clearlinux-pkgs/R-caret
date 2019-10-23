@@ -4,7 +4,7 @@
 #
 Name     : R-caret
 Version  : 6.0.84
-Release  : 34
+Release  : 35
 URL      : https://cran.r-project.org/src/contrib/caret_6.0-84.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/caret_6.0-84.tar.gz
 Summary  : Classification and Regression Training
@@ -13,10 +13,8 @@ License  : GPL-2.0+
 Requires: R-caret-lib = %{version}-%{release}
 Requires: R-Cubist
 Requires: R-ModelMetrics
-Requires: R-earth
 Requires: R-foreach
 Requires: R-ggplot2
-Requires: R-iterators
 Requires: R-klaR
 Requires: R-mda
 Requires: R-pamr
@@ -45,6 +43,7 @@ BuildRequires : R-subselect
 BuildRequires : R-superpc
 BuildRequires : R-withr
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 regression models.
@@ -65,10 +64,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562194582
+export SOURCE_DATE_EPOCH=1571809279
 
 %install
-export SOURCE_DATE_EPOCH=1562194582
+export SOURCE_DATE_EPOCH=1571809279
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
