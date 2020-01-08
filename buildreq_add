@@ -1,10 +1,2 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-R-mda
-R-subselect
-R-spls
-R-klaR
-R-pamr
-R-superpc
-R-Cubist
-R-rmarkdown
