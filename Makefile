@@ -1,5 +1,5 @@
 PKG_NAME := R-caret
-URL = https://cran.r-project.org/src/contrib/caret_6.0-94.tar.gz
+URL = https://ftp.osuosl.org/pub/cran/src/contrib/caret_7.0-1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
